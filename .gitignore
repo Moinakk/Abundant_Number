@@ -1,24 +1,21 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+class Main{
+    static int abundantNumber(int n){
+        int sum=0;
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0){
+                sum=sum+i;
+            }
+        }
+        return sum;
+    }
+    public static void main(String[]args){
+        int num=12;
+        int sum1=abundantNumber(num);
+        if(sum1>num){
+            System.out.println("Abandunt Number");
+        }
+        else{
+            System.out.println("Not abandunt");
+        }
+    }
+}
